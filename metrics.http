@@ -1,0 +1,22 @@
+### Get metrics
+GET http://localhost:3000/metrics
+Accept: application/json
+
+### Get metric by id
+GET http://localhost:3000/metrics/1
+
+### Create a metric
+POST http://localhost:3000/metrics
+Content-Type: application/json
+
+{
+  "bugs": 1,
+  "coverage": 56.3,
+  "vulnerabilities": 3,
+  "hostpot": 2,
+  "code_smells": 5,
+  "idRepository": 1
+}
+
+### Delete a metric
+DELETE http://localhost:3000/metrics/1
