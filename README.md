@@ -124,14 +124,25 @@ Content-Type: application/json
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+### Resp HTTP for Rerport CSV
+
+```bash
+# Get report
+GET http://localhost:3000/tribu/report/1
+```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 <!-- ROADMAP -->
-## Checklist
+## ROADMAP
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
+- [x] CRUD
+- [x] Endpoints
+- [x] Relations (1 - 1 , 1 - *)
+- [x] ORM BDD with TypeORM
+- [x] DTOs
+- [x] Generate Report CSV
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
