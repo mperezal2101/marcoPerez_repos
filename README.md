@@ -8,7 +8,7 @@
   <h3 align="center">Test BackEnd BP-Deuna!</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    Backend developer practical exercise.
     <br />
   </p>
 </div>
@@ -41,8 +41,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-
-HELLO
+Project developed in Next JS with TypeScript, using TypeORM for persistence and with a Postgres database engine hosted in the CockroachDB cloud.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -60,10 +59,6 @@ HELLO
 
 <!-- GETTING STARTED -->
 ## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
