@@ -110,21 +110,21 @@ $ npm run start:prod
 
 ```bash
 # Get organizations
-$ GET http://localhost:3000/organization
+GET http://localhost:3000/organization
 Accept: application/json
 
 # Get organization by id
-$ GET http://localhost:3000/organization/1
+GET http://localhost:3000/organization/1
 
 # Create an organization
-$ POST http://localhost:3000/organization
-$ Content-Type: application/json
-$ {
-$  "name": "OpenAI"
-$ }
+POST http://localhost:3000/organization
+Content-Type: application/json
+ {
+  "name": "OpenAI"
+ }
 
 # Delete an organization
-$ DELETE http://localhost:3000/organization/1
+ DELETE http://localhost:3000/organization/1
 ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
