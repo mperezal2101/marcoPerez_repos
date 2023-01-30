@@ -1,33 +1,47 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Repositories } from './entities/repositories.entity';
+import { RepositoryRequest } from './dto/RepositoryRequest';
+import { TribuService } from '../tribu/tribu.service';
 
 @Injectable()
 export class RepositoriesService {
+  constructor(
+    @InjectRepository(Repositories)
+    private repository: Repository<Repositories>,
+    private tribeService: TribuService,
+  ) {}
 
-    constructor(@InjectRepository(Repositories)
-    private repository:Repository<Repositories>
-    ){}
+  findAll() {
+    return this.repository.find({
+      relations: ['tribe'],
+    });
+  }
 
-    findAll(){
-        return this.repository.find();
+  async findOne(id: number) {
+    const repo = await this.repository.findOne({
+      where: { id_repository: id },
+      relations: { metrics: true },
+    });
+
+    if (!repo) {
+      throw new NotFoundException(`Repository ${id} not found`);
     }
 
-    async findOne(id:number){
+    return repo;
+  }
 
-    }
+  async create(body: RepositoryRequest) {
+    const tribe = await this.tribeService.findOne(body.idTribe);
+    const repo = new Repositories();
+    repo.name = body.name;
+    repo.tribe = tribe;
 
-    async create(body:{name:string}){
-        const organization = new Repositories();
-        // add var
+    await this.repository.save(repo);
+  }
 
-        this.repository.save(organization);
-    }
-
-
-    delete(id:number){
-        this.repository.delete(id);
-    }
-
+  delete(id: number) {
+    this.repository.delete(id);
+  }
 }

@@ -1,11 +1,5 @@
 import {
-    PrimaryGeneratedColumn,
-    Column,
-    Entity,
-    CreateDateColumn,
-    OneToOne,
-    JoinColumn,
-    ManyToOne
+    PrimaryGeneratedColumn,Column,Entity,CreateDateColumn,OneToOne,JoinColumn,ManyToOne
   } from 'typeorm';
   import { Metrics } from './../../metrics/entities/metrics.entity'
   import { Tribu } from './../../tribu/entities/tribu.entity'
