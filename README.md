@@ -90,6 +90,23 @@ This is an example of how to list things you need to use the software and how to
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+### Running the app
+
+```bash
+# development
+$ npm run start
+
+# watch mode
+$ npm run start:dev
+
+# production mode
+$ npm run start:prod
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
 <!-- ROADMAP -->
 ## Roadmap
 
@@ -119,8 +136,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Marco Perez Alvarez - [@your_twitter](https://twitter.com/your_username) - mperez.alvarez97@gmail.com
+Marco Perez Alvarez - mperez.alvarez97@gmail.com
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
