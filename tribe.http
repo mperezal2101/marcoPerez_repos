@@ -1,0 +1,18 @@
+### Get tribes
+GET http://localhost:3000/tribu
+Accept: application/json
+
+### Get tribe by id
+GET http://localhost:3000/tribu/1
+
+### Create a tribe
+POST http://localhost:3000/tribu
+Content-Type: application/json
+
+{
+  "name": "Artificial intelligent",
+  "idOrganization": 2
+}
+
+### Delete a tribe
+DELETE http://localhost:3000/tribu/1
