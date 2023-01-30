@@ -11,8 +11,11 @@ Content-Type: application/json
 
 {
   "name": "Artificial intelligent",
-  "idOrganization": 2
+  "idOrganization": 1
 }
 
 ### Delete a tribe
 DELETE http://localhost:3000/tribu/1
+
+### Get report
+GET http://localhost:3000/tribu/report/1
